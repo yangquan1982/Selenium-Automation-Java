@@ -1,8 +1,8 @@
 package elements;
 
 import locators.*;
-import org.openqa.selenium.By;
 import pages.BasePage;
+import utils.LocatorType;
 
 public class SearchTextElement extends BasePageElement {
 
@@ -10,7 +10,7 @@ public class SearchTextElement extends BasePageElement {
 
     public SearchTextElement(BasePage page) {
         factory = SearchTextLocatorFactory.getFactory();
-        locator = factory.createLocator("xpath", "//*[@id='tsf']/div[2]/div/div[1]/div/div[1]/input");
+        locator = factory.createLocator(LocatorType.XPATH, SearchPageLocators.SEARCH_BOX);
         this.page = page;
     }
 
